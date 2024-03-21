@@ -32,9 +32,9 @@
 </template>
 
 <script>
-import request from '../../utils/axios'
+import request from '../../utils/http-request'
 import {reactive} from 'vue'
-import {METHOD_TYPE} from "@/enums/HttpReq";
+import {HTTP_METHOD} from "@/enums/HttpType";
 
 export default {
   name: 'MyEleUi',
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     async getStuList(requestData) {
-      const resp = await request(METHOD_TYPE.TYPE.POST, "/getStuListByPage", {
+      const resp = await request(HTTP_METHOD.POST, "/getStuListByPage", {
         pageSize: this.pageSize,
         pageNo: this.currentPage,
         name: requestData?.name ?? "",
