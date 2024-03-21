@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <my-ele-ui></my-ele-ui>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyEleUi from "./components/elementui/MyEleUi.vue";
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MyEleUi,
+  },
+  data() {
+
+  },
+  methods: {
+    
   }
 }
 </script>
@@ -24,3 +30,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+./components/mytest/VueTest.vue./components/mytest/VueTest.vue
